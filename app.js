@@ -98,10 +98,20 @@ const data_chars = [
 //
 
 const ui = document.querySelector("main");
+const navList = document.querySelector("nav ul");
 
 data_chars.forEach((char) => {
+  const navChar = document.createElement("LI");
+  navChar.innerHTML = `
+    <img src="./img/chars/${char.icon}.png" alt="${char.name}">
+    <span>${char.name}</span>
+  `;
+  navList.append(navChar);
+
   const ul = document.createElement("UL");
   ul.classList.add("char");
+  ul.id = "char_" + char.icon;
+  
   const h2 = document.createElement("H2");
   h2.innerText = char.name;
   ul.append(h2);
@@ -113,7 +123,9 @@ data_chars.forEach((char) => {
     <img src="./img/marks/${data_marks[el.mark].icon}.png" alt="${el.mark}" />
     <span>${data_marks[el.mark].boss}</span>
     <img src="./img/items/${el.icon}.png" alt="" />
-    <a target="_blank" href="https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=${el.item}" <span>${el.item}</span>
+    <a target="_blank" href="https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=${
+      el.item
+    }" <span>${el.item}</span>
   `;
     marksList.append(li);
   });
