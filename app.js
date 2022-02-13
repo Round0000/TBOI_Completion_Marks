@@ -113,7 +113,7 @@ data_chars.forEach((char) => {
     <img src="./img/marks/${data_marks[el.mark].icon}.png" alt="${el.mark}" />
     <span>${data_marks[el.mark].boss}</span>
     <img src="./img/items/${el.icon}.png" alt="" />
-    <a href="https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=${el.item}" <span>${el.item}</span>
+    <a target="_blank" href="https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=${el.item}" <span>${el.item}</span>
   `;
     marksList.append(li);
   });
