@@ -1,104 +1,151 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Atkinson Hyperlegible', Tahoma, sans-serif;
+  font-family: "Atkinson Hyperlegible", Tahoma, sans-serif;
+  background-color: #ebf2fa;
 }
 
-input, button {
-    font-family: inherit;
+input,
+button {
+  font-family: inherit;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    display: block;
-    image-rendering: pixelated;
+  display: block;
+  image-rendering: pixelated;
 }
 
 /*****************/
 nav {
+  margin-bottom: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: calc(.25em + 2vw);
+  background-color: #fff;
+  border-bottom: 1px solid #0002;
+}
+
+nav ul {
     display: flex;
     flex-wrap: wrap;
+    gap: .5em;
 }
-nav li {
-    display: flex;
-    border: 1px solid #0006;
-    padding: .25em;
-    align-items: center;
-    padding-right: .75em;
+
+nav li a {
+  display: flex;
+  padding: .25em 0.5em;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #0006;
+  box-shadow: 1px 2px 1px #0005;
+  transition: transform .3s;
+  background-color: #ebf2fa;
 }
+
+nav li a:hover,
+nav li a:focus {
+    outline: 2px solid orange;
+}
+
+nav li a:active {
+    transform: translateY(6px);
+    box-shadow: none;
+}
+
+nav li a span {
+  margin: 0.25em;
+}
+
 nav img {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 h2 {
-    color: #000d;
-    text-align: center;
-    margin: .5em auto;
+  color: #000d;
+  text-align: center;
 }
 
 main {
-    padding: calc(.25em + 4vw);
-    background-color: #EBF2FA;
+  padding: calc(0.25em + 4vw);
+}
+
+.char {
+    display: none;
+    padding-top: 7em;
+}
+
+.char:target {
+    display: block;
 }
 
 .marks {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
 }
 
 .marks li {
-    padding: .5em;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-    margin: .5em;
-    box-shadow: inset 2px 2px 5px #0009;
-    background-color: whitesmoke;
-    background: linear-gradient(to bottom, #fff 50%, #444 0);
-    row-gap: 1em;
-    border-radius: 6px;
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  margin: 0.5em;
+  box-shadow: inset 2px 2px 5px #0009;
+  background-color: whitesmoke;
+  background: linear-gradient(to bottom, #fff 50%, #444 0);
+  row-gap: 1em;
+  border-radius: 6px;
 }
 
 .marks li span {
-    line-height: 1.1;
-    color: #222;
+  line-height: 1.1;
+  color: #222;
 }
 .marks li a {
-    display: block;
-    color: white;
-    text-underline-offset: 2px;
+  display: block;
+  color: white;
+  text-underline-offset: 2px;
 }
 
 .marks li span:first-of-type,
 .marks li a {
-    padding: .5em;
+  padding: 0.5em;
 }
-
 
 .marks li img:first-of-type {
-    width: 42px;
-    height: 42px;
-    justify-self: center;
+  width: 42px;
+  height: 42px;
+  justify-self: center;
 }
 .marks li img:last-of-type {
-    width: 48px;
-    height: 48px;
-    justify-self: center;
+  width: 48px;
+  height: 48px;
+  justify-self: center;
 }
 
 .marks li > * {
-    display: flex;
-    align-items: center;
-    margin: .25em;
+  display: flex;
+  align-items: center;
+  margin: 0.25em;
+}
+
+/*  */
+
+#table {
+    display: none;
 }
