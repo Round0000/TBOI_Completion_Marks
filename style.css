@@ -28,13 +28,9 @@ img {
 /*****************/
 nav {
   margin-bottom: 1em;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: calc(.25em + 2vw);
   background-color: #fff;
-  border-bottom: 1px solid #0002;
+  border-bottom: 2px solid #0003;
 }
 
 nav ul {
