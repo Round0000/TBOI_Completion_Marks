@@ -41,7 +41,7 @@ nav ul {
 
 nav li a {
   display: flex;
-  padding: .25em 0.5em;
+  padding: .25em;
   align-items: center;
   color: #333;
   text-decoration: none;
